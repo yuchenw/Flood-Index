@@ -1,6 +1,6 @@
 # Flood Index Calculation
 
-This documents describe about how to calculate the flood index based on the Soil and Water Assessment Tool (SWAT, http://swat.tamu.edu/) simulated flow data.
+This document describes how to calculate the flood index based on the Soil and Water Assessment Tool (SWAT, http://swat.tamu.edu/) simulated flow data.
 
 ## Software and Dataset Requirement:
 1.	SWAT output files (output.rch and output.rsv).
@@ -13,9 +13,9 @@ This documents describe about how to calculate the flood index based on the Soil
 
 #### Create a file to show simulated flow of each sub-basin based on output.rch and output.rsv.
 
-A file to show simulated flow of each sub-basin of necessary to determine the level of two-year flood. We used several Matlab scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.
+A file to show simulated flow of each sub-basin is necessary to determine the level of two-year flood. We used several Matlab scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.
 
-It is necessary to create a look a look-up table showing if a sub-basin contains a reservoir (see https://drive.google.com/a/umich.edu/file/d/0Bz2-pWCMig8fcERaY05VQnF4ZmM/view?usp=sharing as an example). After that, use `CreateSimDaily.m` to get the simulated flow and nutrient values out of each sub-basin. If there are no reservoirs in a sub-basin, the `CreateSimDaily` function uses `rchproc` function to extract values out of each sub-basin; instead, if there are reservoirs in a sub-basin, `CreateSimDaily` uses `rsvproc` function to extract values.
+It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see https://drive.google.com/a/umich.edu/file/d/0Bz2-pWCMig8fcERaY05VQnF4ZmM/view?usp=sharing as an example). After that, use `CreateSimDaily.m` to get the simulated flow and nutrient values out of each sub-basin. If there are no reservoirs in a sub-basin, the `CreateSimDaily` function uses `rchproc` function to extract values out of each sub-basin; instead, if there are reservoirs in a sub-basin, `CreateSimDaily` uses `rsvproc` function to extract values.
 
 The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). Under this folder, the folder `Sensitivity_Test` contains 30 `zip` files, while the folder `Climate_Model` contains the results of our climate model test. Each zip file represents one scenario, containing 57 `dat` files for 57 sub-baisns for our Huron River SWAT model. For example, `sim_daily1` means the simulated values of sub-basin 1.
 
