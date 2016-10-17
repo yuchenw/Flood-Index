@@ -1,10 +1,10 @@
 # Flood Index Calculation
 
-This document describes how to calculate the flood index based on the Soil and Water Assessment Tool (SWAT, http://swat.tamu.edu/) simulated flow data.
+This document describes how to calculate four flood indices based on the streamflow data simulated using the Soil and Water Assessment Tool (SWAT, http://swat.tamu.edu/).
 
 ## Software and Dataset Requirement:
-1.	SWAT output files (output.rch and output.rsv).
-2.	Matlab program (version R2015b or later, https://www.mathworks.com/products/new_products/release2015b.html). 
+1.	SWAT output files at the daily time step (output.rch and output.rsv).
+2.	MATLAB program (version R2015b or later, https://www.mathworks.com/products/new_products/release2015b.html). 
 3.	R program (version 3.3.1 or later, https://cran.r-project.org/).
 4.	R package dplyr (version 0.5.0 or later, https://cran.r-project.org/web/packages/dplyr/index.html) 
 5.	R package lubridate (version 1.6.0 or later, https://cran.r-project.org/web/packages/lubridate/index.html) 
