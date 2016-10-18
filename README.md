@@ -11,9 +11,9 @@ This document describes how to calculate four flood indices based on the streamf
 
 ## Steps:
 
-#### Create a file to show simulated flow of each sub-basin based on output.rch and output.rsv.
+#### Create a file to show simulated flow at each sub-basin outlet based on output.rch and output.rsv.
 
-A file to show simulated flow of each sub-basin is necessary to determine the level of two-year flood. We used several Matlab scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.
+A file to show simulated streamflow at each sub-basin outlet is necessary to determine the flow rate of a two-year return period flood. We created several MATLAB scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.
 
 It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see https://drive.google.com/a/umich.edu/file/d/0Bz2-pWCMig8fcERaY05VQnF4ZmM/view?usp=sharing as an example). After that, use `CreateSimDaily.m` to get the simulated flow and nutrient values out of each sub-basin. If there are no reservoirs in a sub-basin, the `CreateSimDaily` function uses `rchproc` function to extract values out of each sub-basin; instead, if there are reservoirs in a sub-basin, `CreateSimDaily` uses `rsvproc` function to extract values.
 
