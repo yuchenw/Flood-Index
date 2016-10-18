@@ -18,7 +18,7 @@ A file to show simulated streamflow at each sub-basin outlet is necessary to det
 It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see res_lookup.txt as an example). It is also required to provide `Par` and `scenario` arguments to apply the functions `CreateSimDaily.m`, `rchproc.m`, and `rsvproc.m`. `Par` is a set of parameters of watershed and model information. Below is a table showing components in `Par`.
 
 |Information|Description|
--------------------------
+|-----------|-----------|
 |Par.climateFolders|path of the file folder with SWAT output|
 |Par.nsub|number of sub-basins|
 |Par.StartDate|start date of the SWAT simulation excluding warm-up period|
