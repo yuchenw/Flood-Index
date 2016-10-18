@@ -1,0 +1,12 @@
+User inputs specific to watershed: Huron River, MI
+           40,49    | Watershed outlet (subbasin number)
+            1890    | Number of HRUs in watershed
+             110    | Number of AGRR HRUs in watershed (dimension of the problem, HRUs upon which optimization is acting)
+              57    | Number of subbasins in watershed
+      2380358598    | Watershed area in square meters
+
+User inputs specific to SWAT setup
+                3    | Warmup period (years)
+       01/01/1981    | Start date for simulation (mm/dd/yyyy) after warmup period 
+       12/31/2010    | End date for simulation (mm/dd/yyyy)
+
