@@ -13,11 +13,11 @@ This document describes how to calculate four flood indices based on the streamf
 
 #### Create a file to show simulated flow at each sub-basin outlet based on output.rch and output.rsv.
 
-A file to show simulated streamflow at each sub-basin outlet is necessary to determine the flow rate of a two-year return period flood. We created several MATLAB scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.
+A file to show simulated streamflow at each sub-basin outlet is necessary to determine the flow rate of a two-year return period flood. We created several MATLAB scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.  
 
-It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see XXX as an example). After that, use `CreateSimDaily.m` to get the simulated flow and nutrient values out of each sub-basin. If there are no reservoirs in a sub-basin, the `CreateSimDaily` function uses `rchproc` function to extract values out of each sub-basin; instead, if there are reservoirs in a sub-basin, `CreateSimDaily` uses `rsvproc` function to extract values.
+It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see res_lookup.txt as an example). After that, use `CreateSimDaily.m` to get the simulated flow and nutrient values out of each sub-basin. If there are no reservoirs in a sub-basin, the `CreateSimDaily` function uses the `rchproc` function to extract values out of each sub-basin; if there are reservoirs in a sub-basin, `CreateSimDaily` uses the `rsvproc` function to extract values.  
 
-The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). Under this folder, the folder `Sensitivity_Test` contains 30 `zip` files, while the folder `Climate_Model` contains 10 `zip` files. Each zip file represents one scenario, containing 57 `dat` files for each sub-baisn. For example, `sim_daily1` means the simulated values of sub-basin 1.
+The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). Under this folder, the folder `Sensitivity_Test` contains 30 `zip` files, while the folder `Climate_Model` contains 10 `zip` files. Each file represents one scenario, containing 57 `dat` files for each sub-baisn. For example, `sim_daily1` means the simulated values of sub-basin 1.  
 
 #### Calculate the level of two-year flood of each sub-baisn.
 
