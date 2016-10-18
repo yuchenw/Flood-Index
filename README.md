@@ -15,7 +15,7 @@ This document describes how to calculate four flood indices based on the streamf
 
 A file to show simulated streamflow at each sub-basin outlet is necessary to determine the flow rate of a two-year return period flood. We created several MATLAB scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.  
 
-It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see res_lookup.txt as an example). It is also required to provide `Par` and `scenario` arguments to apply the functions `CreateSimDaily.m`, `rchproc.m`, and `rsvproc.m`. `Par` is a set of parameters of watershed and model information. Below is a table showing components in `Par`.
+It is necessary to create a look-up table showing if a sub-basin contains a reservoir (see res_lookup.txt as an example). It is also required to provide `Par` and `scenario` arguments to apply the functions `CreateSimDaily.m`, `rchproc.m`, and `rsvproc.m`. `Par` is a set of parameters of watershed and model information. Below is a table showing components in `Par`. `scenario` is  the names of each folder with the SWAT output of corresponding scenario. 
 
 |Information|Description|
 |-----------|-----------|
