@@ -32,7 +32,7 @@ The outputs, named as `SimDaily data`, are files with `dat` extension showing si
 
 #### Calculate the level of two-year flood of each sub-baisn.
 
-We created two MATLAB scripts (`FQbl.m` and `LP3.m`) to calculate the two-year flood of the baseline scenarios. The level of two-year flooding is the threshold to determine if a flood event happens when calculating flood indices in the next step. For the climate sensitivity test, the baseline scenario is the condition when no temperature or precipitation change (T+0°C P+0%). For climate model test, the baseline scenario is the historical condition of each climate model.   
+We created two MATLAB scripts (`FQbl.m` and `LP3.m`) to calculate the two-year flood of the baseline scenarios. The flow rate of two-year flooding is the threshold to determine if a flood event happens when calculating flood indices in the next step. For the climate sensitivity test, the baseline scenario is the condition when no temperature or precipitation change (T+0°C P+0%). For climate model test, the baseline scenario is the historical condition of each climate model.   
 
 The function `FQbl` first finds the annual peak flow of each sub-basin, then applies the `LP3` function to calculates the two-year flood based on that recurrence interval.   
 
