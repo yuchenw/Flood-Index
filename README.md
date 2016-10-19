@@ -27,7 +27,7 @@ We provide the MATLAB script `batchRun_example1.m` as an example to demonstrate 
 
 We created two MATLAB scripts (`FQbl.m` and `LP3.m`) to calculate the two-year flood of the baseline scenarios. The flow rate of two-year flooding is the threshold to determine if a flood event happens when calculating flood indices in the next step. For the climate sensitivity test, the baseline scenario is the condition when no temperature or precipitation change (T+0°C P+0%). For climate model test, the baseline scenario is the historical condition of each climate model.   
 
-The function `FQbl` first finds the annual peak flow of each sub-basin, then applies the `LP3` function to calculates the two-year flood based on that recurrence interval.   
+The function `FQbl` first finds the annual peak flow of each sub-basin, then applies the `LP3` function to calculate the two-year flood based on that recurrence interval.   
 
 The outputs are text files showing the flow rate of two-year flooding. We provided outputs from our study as examples on the Google Drive folder `Qbl` (https://drive.google.com/drive/folders/0Bz2-pWCMig8fdkVUQlk4N1VoazQ?usp=sharing). `0T0P_Qbl.txt` contains the flow rate of a two-year flood for the climate sensitivity test. Other text files contain threshold for climate model test.
 
