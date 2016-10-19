@@ -15,6 +15,9 @@
 
 ### The scripts for R functions are stored in "G:/ClimateJustice/YuChen/ClimateRuns"
 
+### The baseline's flow rate of two-year flood is stored in
+### G:/ClimateJustice/YuChen/ClimateRuns/Qbl_data
+
 ### The final results are stored in "F:/ClimateJustice/YuChen/ClimateRuns/sensitivity_re2"
 
 # Clear working directory
@@ -55,7 +58,7 @@ all_list2 <- lapply(all_list, lapply, function(input) input <- input %>%
                       filter(Wateryear >= 2025 & Wateryear <= 2075))
 
 # Read baseline condition
-baseline <- read.table("F:/ClimateJustice/YuChen/ClimateRuns/Qbl_data/0T0P_Qbl.txt", 
+baseline <- read.table("G:/ClimateJustice/YuChen/ClimateRuns/Qbl_data/0T0P_Qbl.txt", 
                        header = TRUE)
 
 ### Calculate Flood Exceedance Probability
