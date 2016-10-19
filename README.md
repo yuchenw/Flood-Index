@@ -29,11 +29,11 @@ The function `FQbl` first finds the annual peak flow of each sub-basin, then app
 
 The outputs are text files showing the flow rate of two-year flooding. We provided outputs from our study as examples on the Google Drive folder `Qbl` (https://drive.google.com/drive/folders/0Bz2-pWCMig8fdkVUQlk4N1VoazQ?usp=sharing). `0T0P_Qbl.txt` contains the flow rate of a two-year flood for the climate sensitivity test. Other text files contain threshold for climate model test.
 
-*We provide the MATLAB script `batchRun_example.m` as an example to demonstrate the application of these functions to first create `SimDaily data` and then calculat the two-year flood of each sub-basin 
+* We provide the MATLAB script `batchRun_example.m` as an example to demonstrate the application of these functions to first create `SimDaily data` and then calculat the two-year flood of each sub-basin 
 
 ### Calculate flood indices
 
 We used R scripts to calculate flood indices of each sub-basin and each scenario. First, `Function_readSimDaily.R` contains functions to pre-process the `SimDaily data` to add water year information and select flow data. After that, `Function_Flood_Index.R` contains several functions to calculate flood exceedance probability, flood duration, flood magnitude, and flood frequency indices. The outputs are `csv` files. Each files contain six columns, showing sub-basin number, **flood duration** (**FD**), **flood magnitude** (**FM**), **flood frequency** (**FF**), **flood exceedance probability** (**FEP**), and the flow rate of a two-year flood (**Qbl**). We provide the outputs in the Google Drive folder `Flood_Index` (https://drive.google.com/open?id=0Bz2-pWCMig8fUUJIZHVuQmUxRk0). The results of the climate sensitivity test and climate model test are in the folders `Sensitivity_Test` and `Climate_Model`, respectively. 
 
-*We rovide our R scripts (`FI_sensitivity.R` and `FI_climate.R`) to demonstrate the use of these functions to calculate flood indices.
+* We rovide our R scripts (`FI_sensitivity.R` and `FI_climate.R`) to demonstrate the use of these functions to calculate flood indices.
 
