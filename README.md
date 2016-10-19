@@ -21,7 +21,7 @@ After that, apply `CreateSimDaily.m` to get the simulated flow and nutrient valu
 
 The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). Under this folder, the folder `Sensitivity_Test` contains 30 `zip` files, while the folder `Climate_Model` contains 10 `zip` files. Each file represents one scenario, containing 57 `dat` files, one for each sub-basin. For example, `sim_daily1` means the simulated values of sub-basin 1.  
 
-We provide the MATLAB script `batchRun_example1.m` as an example to demonstrate the use of these functions to create `SimDaily data`.
+We provide the MATLAB script `batchRun_example1.m` as an example to demonstrate the application of these functions to create `SimDaily data`.
 
 ### Calculate the level of two-year flood of each sub-baisn.
 
