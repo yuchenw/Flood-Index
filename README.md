@@ -37,9 +37,9 @@ We used R scripts to calculate flood indices of each sub-basin and each scenario
 
 * We rovide our R scripts (`FI_sensitivity.R` and `FI_climate.R`) to demonstrate the use of these functions to calculate flood indices.
 
-### Result and example datasets
+### Result datasets
 
-As was mentioned above, we provide some of our results and example dataset on the Google Drive.
+As was mentioned above, we provide our result datasets on the Google Drive.
 
 * SimDaily: https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M
 
