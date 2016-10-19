@@ -11,7 +11,7 @@ This document describes how to calculate four flood indices based on the streamf
 
 ## Steps:
 
-### Create a file to show simulated flow at each sub-basin outlet based on output.rch and output.rsv.
+### 1. Create a file to show simulated flow at each sub-basin outlet based on output.rch and output.rsv.
 
 A file to show simulated streamflow at each sub-basin outlet is essential to determine the flow rate of a two-year return period flood. We created several MATLAB scripts (`CreateSimDaily.m`, `rchproc.m`, `rsvproc.m`) to achieve this task.  
 
@@ -21,7 +21,7 @@ After that, apply `CreateSimDaily.m` to get the simulated flow and nutrient valu
 
 The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). 
 
-### Calculate the level of two-year flood of each sub-baisn.
+### 2. Calculate the level of two-year flood of each sub-baisn.
 
 We created two MATLAB scripts (`FQbl.m` and `LP3.m`) to calculate the two-year flood of the baseline scenarios. The flow rate of two-year flooding is the threshold to determine if a flood event happens when calculating flood indices in the next step. For the climate sensitivity test, the baseline scenario is the condition when no temperature or precipitation change (T+0°C P+0%). For climate model test, the baseline scenario is the historical condition of each climate model.   
 
@@ -31,7 +31,7 @@ The outputs are text files showing the flow rate of two-year flooding. We provid
 
 * We provide the MATLAB script `batchRun_example.m` as an example to demonstrate the application of these functions to first create `SimDaily data` and then calculat the flow rate two-year flood of each sub-basin. 
 
-### Calculate flood indices
+### 3. Calculate flood indices
 
 We used R scripts to calculate flood indices of each sub-basin and each scenario. First, `Function_readSimDaily.R` contains functions to pre-process the `SimDaily data` to add water year information and select flow data. After that, `Function_Flood_Index.R` contains several functions to calculate flood exceedance probability, flood duration, flood magnitude, and flood frequency indices. The outputs are `csv` files. Each file contains six columns, showing sub-basin number, **flood duration** (**FD**), **flood magnitude** (**FM**), **flood frequency** (**FF**), **flood exceedance probability** (**FEP**), and the flow rate of a two-year flood (**Qbl**). We provide the outputs in the Google Drive folder `Flood_Index` (https://drive.google.com/open?id=0Bz2-pWCMig8fUUJIZHVuQmUxRk0).
 
