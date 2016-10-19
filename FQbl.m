@@ -4,7 +4,7 @@ function FQbl(base,file)
 
 % Parameters:
 % base is the name of baseline scenario. Different baseline scenarios were used for different climate models.
-% file is the user-defined file name of the output file with flood threshold for each subbasin.
+% file is the user-defined file name of the output file with flood threshold for each sub-basin.
 
 Qbl = zeros(57, 1);        % An array to store flood threshold of each subbasin, 57 is the number of subbasins in this study.
 
