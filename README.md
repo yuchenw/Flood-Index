@@ -29,7 +29,7 @@ The function `FQbl` first finds the annual peak flow of each sub-basin, then app
 
 The outputs are text files showing the flow rate of two-year flooding. We provided outputs from our study as examples on the Google Drive folder `Qbl` (https://drive.google.com/drive/folders/0Bz2-pWCMig8fdkVUQlk4N1VoazQ?usp=sharing). `0T0P_Qbl.txt` contains the flow rate of a two-year flood for the climate sensitivity test. Other text files contain threshold for climate model test.
 
-* We provide the MATLAB script `batchRun_example.m` as an example to demonstrate the application of these functions to first create `SimDaily data` and then calculat the two-year flood of each sub-basin 
+* We provide the MATLAB script `batchRun_example.m` as an example to demonstrate the application of these functions to first create `SimDaily data` and then calculat the flow rate two-year flood of each sub-basin. 
 
 ### Calculate flood indices
 
