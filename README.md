@@ -1,4 +1,4 @@
-# Flood Index Calculation
+# The Flood Indices Calculation
 
 This document describes how to calculate four flood indices based on the streamflow data simulated using the Soil and Water Assessment Tool (SWAT, http://swat.tamu.edu/).
 
@@ -19,7 +19,7 @@ It is necessary to create a look-up table showing if a sub-basin contains a rese
 
 After that, apply `CreateSimDaily.m` to get the simulated flow and nutrient values out of each sub-basin. If there are no reservoirs in a sub-basin, the `CreateSimDaily` function uses the `rchproc` function to extract values out of each sub-basin; if there are reservoirs in a sub-basin, `CreateSimDaily` uses the `rsvproc` function to extract values.  
 
-The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). Under this folder, the folder `Sensitivity_Test` contains 30 `zip` files, while the folder `Climate_Model` contains 10 `zip` files. Each file represents one scenario, containing 57 `dat` files, one for each sub-basin. For example, `sim_daily1` means the simulated values of sub-basin 1.  
+The outputs, named as `SimDaily data`, are files with `dat` extension showing simulated daily flow and nutrient loads of each sub-basin. We provided outputs from our study as examples on the Google Drive folder `SimDaily` (https://drive.google.com/open?id=0Bz2-pWCMig8fTEJtSlNIZG44M3M). 
 
 ### Calculate the level of two-year flood of each sub-baisn.
 
@@ -37,3 +37,6 @@ We used R scripts to calculate flood indices of each sub-basin and each scenario
 
 * We rovide our R scripts (`FI_sensitivity.R` and `FI_climate.R`) to demonstrate the use of these functions to calculate flood indices.
 
+### 
+
+Under this folder, the folder `Sensitivity_Test` contains 30 `zip` files, while the folder `Climate_Model` contains 10 `zip` files. Each file represents one scenario, containing 57 `dat` files, one for each sub-basin. For example, `sim_daily1` means the simulated values of sub-basin 1.  
