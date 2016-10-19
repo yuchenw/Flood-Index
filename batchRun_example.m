@@ -1,5 +1,7 @@
 %%% This is a script demonstrates how to created sim_daily files
 %%% using the functions "CreateSimDaily", "rchproc", and "rsvproc"
+%%% After that, apply the function FQbl to calculate the flow rate
+%%% of two-year flood.
 
 % In this example, the script files (CreatSimDaily.m, rchproc.m, and rsvproc.m) 
 % and the reservoir look-up table (res_lookup.txt)

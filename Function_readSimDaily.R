@@ -1,10 +1,10 @@
-### This script creates a function to read all sensitivity results
+### This script creates a function to read SimDaily data
 
 # Load packages
 library(dplyr)
 library(lubridate)
 
-## A function to read sim daily data from one subbasin
+## A function to read SimDaily data from one sub-basin
 readSub <- function(sub, scenario){
   temp_df <- read.table(paste0(scenario, "/sim_daily", sub, ".dat"),
                         header = FALSE, skip = 1, stringsAsFactors = FALSE) %>% 
@@ -16,7 +16,7 @@ readSub <- function(sub, scenario){
   return(temp_df)
 }
 
-## A function to read all sim daily data from one scenario
+## A function to read all SimDaily data from one scenario
 readSimDaily <- function(scenario){
   temp_list <- lapply(X = seq(1, 57, 1), FUN = readSub, scenario = scenario)
   return(temp_list)

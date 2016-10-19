@@ -1,12 +1,30 @@
-### This script calculates FRI based on the value of simdaily
+### This script calculates the four flood indices for the
+### climate sensitivity test
 
-### This script creates a function to read all sensitivity results
+### The first part of the code loads all the SimDaily data from
+### all scenarios using the function "readSimDaily"
+### After that, select the data for appropriate water years (2025 - 2075)
+### Finally, apply the FD_Index, FM_Index, FF_Index, and FEP_Index function
+### to calculate flood duration, flood magnitude, flood frequency, and
+### flood exceedance probability
+
+### The SimDaily data of 30 climate sensitivity scenarios
+### are stored in folders with the name "0T0P", "0T+10P" ...
+### "0T+20P". All these 30 folders are stored in the directory
+### "G:/ClimateJustice/FloodHazardIndex/XinXu_files/Huron_SWAT_manual_calibration/ClimateStressTest - Sensitivity"
+
+### The scripts for R functions are stored in "G:/ClimateJustice/YuChen/ClimateRuns"
+
+### The baseline's flow rate of two-year flood is stored in
+### G:/ClimateJustice/YuChen/ClimateRuns/Qbl_data
+
+### The final results are stored in "F:/ClimateJustice/YuChen/ClimateRuns/sensitivity_re2"
 
 # Clear working directory
 rm(list = ls())
 
 # Set working directory to import functions
-setwd("F:/ClimateJustice/YuChen/ClimateRuns")
+setwd("G:/ClimateJustice/YuChen/ClimateRuns")
 
 # Load packages
 library(dplyr)
@@ -26,21 +44,21 @@ source("Function_readSimDaily.R")
 source("Function_Flood_Index.R")
 
 # Set working directory to import SimDaily data
-setwd("F:/ClimateJustice/FloodHazardIndex/XinXu_files/Huron_SWAT_manual_calibration/ClimateStressTest - Sensitivity")
+setwd("G:/ClimateJustice/FloodHazardIndex/XinXu_files/Huron_SWAT_manual_calibration/ClimateStressTest - Sensitivity")
 
 # Use lapply to real all data
 all_list <- lapply(s_vec, readSimDaily)
 names(all_list) <- s_vec
 
 # Set the working directory to save output files
-setwd("F:/ClimateJustice/YuChen/ClimateRuns")
+setwd("G:/ClimateJustice/YuChen/ClimateRuns")
 
 ### Remove water year from 2024
 all_list2 <- lapply(all_list, lapply, function(input) input <- input %>% 
                       filter(Wateryear >= 2025 & Wateryear <= 2075))
 
 # Read baseline condition
-baseline <- read.table("F:/ClimateJustice/YuChen/ClimateRuns/Qbl_data/0T0P_Qbl.txt", 
+baseline <- read.table("G:/ClimateJustice/YuChen/ClimateRuns/Qbl_data/0T0P_Qbl.txt", 
                        header = TRUE)
 
 ### Calculate Flood Exceedance Probability
@@ -62,6 +80,6 @@ for (scenario in s_vec){
                         stringsAsFactors = FALSE)
   
   # Save a csv file for each scenario
-  write.csv(temp_df, paste0("F:/ClimateJustice/YuChen/ClimateRuns/sensitivity_re2/FFI_", 
+  write.csv(temp_df, paste0("G:/ClimateJustice/YuChen/ClimateRuns/sensitivity_re2/FFI_", 
                             scenario, ".csv"), row.names = FALSE)
 }

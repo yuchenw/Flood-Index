@@ -1,6 +1,23 @@
-### This script calculates FI based on the value of simdaily
+### This script calculates the four flood indices for the
+### climate model test
 
-### This script creates a function to read all sensitivity results
+### The first part of the code loads all the SimDaily data from
+### all scenarios using the function "readSimDaily"
+### After that, select the data for appropriate water years (2025 - 2075)
+### Finally, apply the FD_Index, FM_Index, FF_Index, and FEP_Index function
+### to calculate flood duration, flood magnitude, flood frequency, and
+### flood exceedance probability
+
+### The SimDaily data of climate model scenarios are stored in the directory
+### "G:/ClimateJustice/FloodHazardIndex/XinXu_files/Huron_SWAT_manual_calibration/ClimateStressTest - Sensitivity"
+### See line 30-36 for their names.
+
+### The scripts for R functions are stored in "G:/ClimateJustice/YuChen/ClimateRuns"
+
+### The baselines' flow rate of two-year flood is stored in
+### G:/ClimateJustice/YuChen/ClimateRuns/Qbl_data
+
+### The final results are stored in "F:/ClimateJustice/YuChen/ClimateRuns/climate_re2"
 
 # Clear working directory
 rm(list = ls())
