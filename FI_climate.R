@@ -3,7 +3,7 @@
 
 ### The first part of the code loads all the SimDaily data from
 ### all scenarios using the function "readSimDaily"
-### After that, select the data for appropriate water years (2025 - 2075)
+### After that, select the data for appropriate water years
 ### Finally, apply the FD_Index, FM_Index, FF_Index, and FEP_Index function
 ### to calculate flood duration, flood magnitude, flood frequency, and
 ### flood exceedance probability
