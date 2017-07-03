@@ -37,6 +37,6 @@ CreateSimDaily(Par,scenario)
 
 % base is the name of baseline scenario. Different baseline scenarios were used for different climate models.
 % file is the user-defined file name of the output file with flood threshold for each sub-basin.
-FQbl('GFDL_presentday_WLEB_leapyears', 'RCM4_GFDL__Qbl.txt')
+FQbl('GFDL_presentday_WLEB_leapyears', 'RCM4_GFDL_Qbl.txt')
 
 % This creates a text file "RCM4_GFDL_Qbl.txt" in the folder "G:\ClimateJustice\YuChen\FloodIndex"
