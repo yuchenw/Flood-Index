@@ -51,7 +51,7 @@ source("Function_Flood_Index.R")
 # Set working directory to import SimDaily data
 setwd("G:/ClimateJustice/YuChen/ClimateRuns/climate_re")
 
-# Use lapply to real all data
+# Use lapply to read all data
 historical_list <- lapply(historical_vec, readSimDaily)
 names(historical_list) <- historical_name
 
