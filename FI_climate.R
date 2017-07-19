@@ -9,7 +9,7 @@
 ### flood exceedance probability
 
 ### The SimDaily data of climate model scenarios are stored in the directory
-### "G:/ClimateJustice/FloodHazardIndex/XinXu_files/Huron_SWAT_manual_calibration/ClimateStressTest - Sensitivity"
+### "G:/ClimateJustice/YuChen/ClimateRuns/climate_re"
 ### See line 30-36 for their names.
 
 ### The scripts for R functions are stored in "G:/ClimateJustice/YuChen/ClimateRuns"
