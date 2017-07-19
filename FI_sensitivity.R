@@ -46,7 +46,7 @@ source("Function_Flood_Index.R")
 # Set working directory to import SimDaily data
 setwd("G:/ClimateJustice/FloodHazardIndex/XinXu_files/Huron_SWAT_manual_calibration/ClimateStressTest - Sensitivity")
 
-# Use lapply to real all data
+# Use lapply to read all data
 all_list <- lapply(s_vec, readSimDaily)
 names(all_list) <- s_vec
 
